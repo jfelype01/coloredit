@@ -2,53 +2,77 @@ var hex = document.getElementById('hex');
 var rgb = document.getElementById('rgb');
 var can = document.getElementById('canva');
 
-function hello(a, b, c) {
-    hex.value = a
-    rgb.value = b
-    can.style.backgroundColor = c
+const js = {
+    0.1() {
+        let colr = can.style.backgroundColor;
+        if (colr.split(',').length > 3) {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 5)} 0.1)`
+        } else {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 1)}, 0.1)`
+            }
+        },
+    0.2() {
+        let colr = can.style.backgroundColor;
+        if (colr.split(',').length > 3) {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 5)} 0.2)`
+        } else {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 1)}, 0.2)`
+            }
+        },
+    0.3() {
+        let colr = can.style.backgroundColor;
+        if (colr.split(',').length > 3) {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 5)} 0.3)`
+        } else {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 1)}, 0.3)`
+        }}
+    , 
+    0.4() {
+        let colr = can.style.backgroundColor;
+        if (colr.split(',').length > 3) {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 5)} 0.4)`
+        } else {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 1)}, 0.4)`
+            }
+        },
+    0.5() {
+        let colr = can.style.backgroundColor;
+        if (colr.split(',').length > 3) {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 5)} 0.5)`
+        } else {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 1)}, 0.5)`
+            }
+        },
+    0.6() {
+        let colr = can.style.backgroundColor;
+        if (colr.split(',').length > 3) {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 5)} 0.6)`
+        } else {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 1)}, 0.6)`
+        }}
+    , 
+    0.7() {
+        let colr = can.style.backgroundColor;
+        if (colr.split(',').length > 3) {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 5)} 0.7)`
+        } else {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 1)}, 0.7)`
+            }
+        },
+    0.8() {
+        let colr = can.style.backgroundColor;
+        if (colr.split(',').length > 3) {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 5)} 0.8)`
+        } else {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 1)}, 0.8)`
+            }
+        },
+    0.9() {
+        let colr = can.style.backgroundColor;
+        if (colr.split(',').length > 3) {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 5)} 0.9)`
+        } else {
+            can.style.backgroundColor = `${colr.slice(0, colr.length - 1)}, 0.9)`
+            }
+        }
 }
-
-const test = {
-    White() {
-        hello('ffffff', '255, 255, 255', '#ffffff')
-    },
-    Yellow() {
-        hello('ffff00', '255, 255, 0', '#ffff00')
-    },
-    Orange() {
-        hello('ffa500', '255, 165, 0', 'rgb(255, 165, 0)')
-    }, 
-    Red() {
-        hello('ff0000', '255, 0, 0', '#ff0000')
-    },
-    Brown() {
-        hello('a52a2a', '165, 42, 42', 'rgb(165, 42, 42)')
-    },
-    Pink() {
-        hello('ffc0cb', '255, 192, 203', '#ffc0cb')
-    },
-    Violet() {
-        hello('ee82ee', '238, 130, 238', 'rgb(238, 120, 238)')
-    },
-    Purple() {
-        hello('a020f0', '128, 0, 128', "#a020f0")
-    },
-    Lime() {
-        hello('00ff00', '0, 255, 0', 'rgb(0, 255, 0)')
-    },
-    Green() {
-        hello('008000', '0, 128, 0', "#008000")
-    },
-    Blue() {
-        hello('00000ff', '0, 0, 255', 'rgb(0, 0, 255)')
-    },
-    Dark() {
-        hello('00008b', '0, 0, 139', "#00008b")
-    },
-    Gray() {
-        hello('808080', '128, 128, 128', 'rgb(128, 128, 128)')
-    },
-    Black() {
-        hello('000000', '0, 0, 0', 'rgb(0, 0, 0')
-    }
-};

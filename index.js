@@ -1,7 +1,17 @@
 var hex = document.getElementById('hex');
 var rgb = document.getElementById('rgb');
 var can = document.getElementById('canva');
-
+var i = 1
+var ob = new MutationObserver(() => {
+    console.log(can.style.backgroundColor)
+    while (i <= 9) {
+        var button = document.getElementById(`${i}`)
+        console.log(button)
+        button.style.backgroundColor = `${can.style.backgroundColor.slice(0, can.style.backgroundColor.length - 1)}, ${i/10})`
+        i++
+    }
+    i = 1
+})
 const hexCodes = {
     10() {return'a'},
     11() {return'b'},
@@ -11,65 +21,26 @@ const hexCodes = {
     15() {return'f'},
 }
 function rgbToHex(string) {
-    let controle = 0
     let x = 0
-    var y = 0
     var array = []
-    str = string.replace('', ' ')
-    var str = str.split(',')
+    var str = string.replace(' ', '')
+    str = str.split(',')
+    if (str.length < 3) return ' '
+    if (str[2] === ' ') return ' '
+    if (str[2]==='') return ' '
+    console.log(str)
     while (x < str.length) {
         var element = parseInt(str[x], 10)
-        y = 0
-        if (element % 2 === 0) {
-            while (y < 16) {
-                if ((element - y)%16!==0) {
-                    y++
-                    y++
-                    controle++
-                    if (controle > 130) return 0
-                } else {
-                    var a = y
-                    if (y > 9){
-                         a = hexCodes[y]
-                         a = a()
-                         console.log(a)
-                    }
-                    var b = (element - y)/16
-                    if (b > 9) {
-                        b = hexCodes[b]
-                        b = b()
-                    }
-                    x++
-                    array.push(b, a)
-                    y = 20
-                }
-            }
-        } else {
-            y++
-            while (y < 16) {
-                if((element-y)%16===0) {
-                    let a = `${y}`
-                    if(y>=10){
-                        a=hexCodes[a]()
-                        console.log(a)
-                    }
-                    let b = `${((element-y)/16)}`
-                    if(((element-y)/16)>9){
-                        b = hexCodes[b]()
-                    }
-                    y = 20
-                    array.push(b, a)
-                    x++
-                } else {
-                    y++
-                    y++
-                    controle++
-                    if(130<controle) return 0
-                }
-            }
-        }
+        var second = element % 16
+        
+        var first = (element - second) / 16
+        if (second > 9) second = hexCodes[second]()
+        if(first>9)first = hexCodes[first]()
+        array.push(first)
+        array.push(second)
+        x++
     }
-    console.log(array)
+
     return array.join('')
 }
 
@@ -93,3 +64,6 @@ rgb.addEventListener('input', function() {
     color = rgbToHex(color)
     hex.value = color
 });
+
+ob.observe(can, {attributeFilter: ["style"]})
+

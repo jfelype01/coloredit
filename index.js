@@ -11,6 +11,8 @@ var ob = new MutationObserver(() => {
         i++
     }
     i = 1
+    rgb.style.borderBottomColor = can.style.backgroundColor
+    hex.style.borderBottomColor = can.style.backgroundColor
 })
 const hexCodes = {
     10() {return'a'},
@@ -29,7 +31,7 @@ function rgbToHex(string) {
     if (str[2] === ' ') return ' '
     if (str[2]==='') return ' '
     console.log(str)
-    while (x < str.length) {
+    while (x < 3) {
         var element = parseInt(str[x], 10)
         var second = element % 16
         
@@ -46,8 +48,12 @@ function rgbToHex(string) {
 
 hex.addEventListener('input', function() {
     console.log(hex.value);
+    if (hex.value[0] === '#') {
+        can.style.backgroundColor = `${hex.value}`
+    }
     can.style.backgroundColor = `#${hex.value}`;
     var color = can.style.backgroundColor;
+    
     if (color[3] === 'a') {
         color = color.split('rgba(')
         color = color.join('')
@@ -62,8 +68,25 @@ rgb.addEventListener('input', function() {
     can.style.backgroundColor = `rgb(${rgb.value})`;
     var color = rgb.value
     color = rgbToHex(color)
-    hex.value = color
+    hex.value = '#'+color
 });
 
 ob.observe(can, {attributeFilter: ["style"]})
+
+hex.onchange = function() {
+    console.log('oaonwhjdbg')
+    if (hex.value.length < 6 || (hex.value.length < 7 && hex.value[0] === '#') || hex.value.length > 6) {
+        var colorx = `${can.style.backgroundColor}`
+        if (colorx[3] === 'a'){
+            console.log(colorx)
+            hex.value = rgbToHex(`${colorx.slice(5, -1)}`)
+        } else {
+            console.log('ola')
+            hex.value = rgbToHex(`${colorx.slice(4, -1)}`)
+    }}
+    if(hex.value[0] !== '#') {
+        hex.value = `#${hex.value}`
+        console.log('ol')
+    }
+}
 

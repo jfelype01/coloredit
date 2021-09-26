@@ -61,3 +61,14 @@ body {
     
     margin-top: 16px;
 }
+
+#rgb, #hex {
+
+    border-radius: 5px;
+}
+
+#center input {
+    border: 0px;
+    border-bottom: 2px solid black;;
+
+}

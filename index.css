@@ -1,74 +1,136 @@
-body {
-    background-color: rgba(0, 0, 0, 0.075);
+#canva {
+    width: 320px;
+    height: 320px;
+
+    border-radius: 30px;
+    border: 3px solid black;
+
+    margin: 32px 32px 32px 32px;
 }
 
-#geral {
+#first {
     display: flex;
+    flex-direction: row;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 72px;
+
+}
+
+#inputsAndButt {
+    display:flex;
+    flex-direction: column;
+
     justify-content: space-between;
-}
 
-#left button{
-    width: 72px;
-    height: 72px;
-    
-    border: 0px;
-    border-radius: 4px;
-    margin-bottom: 8px;
-
-
-    margin-right: 16px;
-
-    color: teal;
-}
-
-#right button{
-    display: flex;
-    flex-direction: column;
-    
-
-    width: 240px;
-    height: 48px;
-    background-color: rgba(0, 243, 81, 0.2);
-    
-    border: 0px;
-    border-radius: 4px;
-    margin-bottom: 8px;
-}
-
-#right {
-    margin-right: 32px;
-    margin-top: 32px
-}
-
-#left{
-    margin-top: 32px;
-    margin-left: 32px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-#center {
-    display: flex;
-    flex-direction: column;
     margin-top: 32px;
 }
 
-#center .inputs {
+.buttons {
     display: flex;
-    justify-content: space-between;
-    
-    margin-top: 16px;
+    flex-direction: row;
+
+    margin-bottom: 72px;
+
+}
+
+.inputs, .buttons {
+    margin-left: 48px;
 }
 
 #rgb, #hex {
+    /* border: 1px solid transparent;
+    outline: 0;
+    border-bottom: 1px solid black; */
 
-    border-radius: 5px;
+    width: 120px;
+    height: 48px;
 }
 
-#center input {
-    border: 0px;
-    border-bottom: 2px solid black;;
+.primeiro {
+    display: flex;
+    flex-direction: row;
 
+
+}
+
+#rigthButtons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    margin-left: 72px;
+}
+
+#rigthButtons button {
+
+    width: 64px;
+    height: 64px;
+
+    border: 0px;
+
+}
+#bottomButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    margin: 0px 8px 0px 8px;
+}
+
+#bottomButtons button {
+    height: 64px;
+
+    
+
+    border: 0px;
+
+}
+
+#o01 {
+    background-color: black;
+    opacity: 0.1;
+}
+
+#o02 {
+    background-color: black;
+    opacity: 0.2;
+}
+
+#o03 {
+    background-color: black;
+    opacity: 0.3;
+}
+
+#o04 {
+    background-color: black;
+    opacity: 0.4;
+}
+
+#o05 {
+    background-color: black;
+    opacity: 0.5;
+}
+
+#o06 {
+    background-color: black;
+    opacity: 0.6;
+}
+
+#o07 {
+    background-color: black;
+    opacity: 0.7;
+}
+
+#o08 {
+    background-color: black;
+    opacity: 0.8;
+}
+
+#o09 {
+    background-color: black;
+    opacity: 0.9;
 }

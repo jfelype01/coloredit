@@ -7,9 +7,29 @@
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
-<body>
+<body style="margin: 0px">
     <div id="geral">
-        <div id="left">
+        <div class="primeiro">
+        <div id="first">
+            <canvas id='canva' height="400px" width="400px" style="background-color: rgb(0, 0, 0);"></canvas>
+            <div id='inputsAndButt'>
+                <p>HEXADECIMAL</p>
+                <div class='inputs'>
+                    <input type="text" id='hex'>
+                    <button onclick="copyButton()">Copiar</button>
+                </div>
+                <p>RGB</p>
+                <div class='buttons'>
+                    <input id='rgb' type="text ">
+                    <button onclick='copyB()'>Copiar</button>
+                </div>
+                
+                <script src='./copy.js'></script>
+
+            <script src="index.js"></script>
+            </div>
+        </div>
+        <div id="rigthButtons">
             <script src="b.js"></script>
             <button onclick="test['White']()" style="background-color: White;"></button>
             <button onclick="test['Yellow']()" style="background-color: yellow;"></button>
@@ -25,27 +45,57 @@
             <button onclick="test['Dark']()" style="background-color: darkblue"></button>
             <button onclick="test['Gray']()" style="background-color: gray;"></button>
             <button onclick="test['Black']()" style="background-color: black"></button>
+            <button onclick="test['White']()" style="background-color: White;"></button>
+            <button onclick="test['Yellow']()" style="background-color: yellow;"></button>
+            <button onclick="test['Orange']()" style="background-color: orange;"></button>
+            <button onclick="test['Red']()" style="background-color: red;"></button>
+            <button onclick="test['Brown']()" style="background-color: brown;"></button>
+            <button onclick="test['Pink']()" style="background-color: pink;"></button>
+            <button onclick="test['Violet']()" style="background-color: violet;"></button>
+            <button onclick="test['Purple']()" style="background-color:purple"></button>
+            <button onclick="test['Lime']()" style="background-color: lime;"></button>
+            <button onclick="test['Green']()" style="background-color: green;"></button>
+            <button onclick="test['Blue']()" style="background-color: blue;"></button>
+            <button onclick="test['Dark']()" style="background-color: darkblue"></button>
+            <button onclick="test['Gray']()" style="background-color: gray;"></button>
+            <button onclick="test['Black']()" style="background-color: black"></button>
+            <button onclick="test['White']()" style="background-color: White;"></button>
+            <button onclick="test['Yellow']()" style="background-color: yellow;"></button>
+            <button onclick="test['Orange']()" style="background-color: orange;"></button>
+            <button onclick="test['Red']()" style="background-color: red;"></button>
+            <button onclick="test['Brown']()" style="background-color: brown;"></button>
+            <button onclick="test['Pink']()" style="background-color: pink;"></button>
+            <button onclick="test['Violet']()" style="background-color: violet;"></button>
+            <button onclick="test['Purple']()" style="background-color:purple"></button>
+            <button onclick="test['Lime']()" style="background-color: lime;"></button>
+            <button onclick="test['Green']()" style="background-color: green;"></button>
+            <button onclick="test['Blue']()" style="background-color: blue;"></button>
+            <button onclick="test['Dark']()" style="background-color: darkblue"></button>
+            <button onclick="test['Gray']()" style="background-color: gray;"></button>
+            <button onclick="test['Black']()" style="background-color: black"></button>
+            <button onclick="test['Lime']()" style="background-color: lime;"></button>
+            <button onclick="test['Green']()" style="background-color: green;"></button>
+            <button onclick="test['Blue']()" style="background-color: blue;"></button>
+            <button onclick="test['Dark']()" style="background-color: darkblue"></button>
+            <button onclick="test['Gray']()" style="background-color: gray;"></button>
+            <button onclick="test['Black']()" style="background-color: black"></button>
+        </div>
+        </div>
+
             
-        </div>
-        <div id='center'>
-            <canvas id='canva' height="400px" width="400px" style="background-color: rgb(0, 0, 0);"></canvas>
-            <div class='inputs'>
-                <input type="text" id='hex'>
-                <input id='rgb' type="text ">
-            </div>
-            <script src="index.js"></script>
-        </div>
-        <div id="right">
+        
+
+        <div id="bottomButtons">
             <script src="const.js"></script>
-            <button id='1' onclick='js[0.1]()'></button>
-            <button id='2' onclick='js[0.2]()'></button>
-            <button id='3' onclick='js[0.3]()'></button>
-            <button id='4' onclick='js[0.4]()'></button>
-            <button id='5' onclick='js[0.5]()'></button>
-            <button id='6' onclick='js[0.6]()'></button>
-            <button id='7' onclick='js[0.7]()'></button>
-            <button id='8' onclick='js[0.8]()'></button>
-            <button id='9' onclick='js[0.9]()'></button>
+            <button id='o01' onclick='js[0.1]()'></button>
+            <button id='o02' onclick='js[0.2]()'></button>
+            <button id='o03' onclick='js[0.3]()'></button>
+            <button id='o04' onclick='js[0.4]()'></button>
+            <button id='o05' onclick='js[0.5]()'></button>
+            <button id='o06' onclick='js[0.6]()'></button>
+            <button id='o07' onclick='js[0.7]()'></button>
+            <button id='o08' onclick='js[0.8]()'></button>
+            <button id='o09' onclick='js[0.9]()'></button>
         </div>
     </div>
 </body>

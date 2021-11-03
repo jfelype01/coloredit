@@ -74,7 +74,7 @@ rgb.addEventListener('input', function() {
 ob.observe(can, {attributeFilter: ["style"]})
 
 hex.onchange = function() {
-    console.log('oaonwhjdbg')
+    
     if (hex.value.length < 6 || (hex.value.length < 7 && hex.value[0] === '#') || hex.value.length > 6) {
         var colorx = `${can.style.backgroundColor}`
         if (colorx[3] === 'a'){
@@ -87,6 +87,10 @@ hex.onchange = function() {
     if(hex.value[0] !== '#') {
         hex.value = `#${hex.value}`
         console.log('ol')
+    }
+    if (hex.value.length > 6) {
+        hex.value = hex.value.slice(0, 7)
+        can.style.backgroundColor = hex.value
     }
 }
 

@@ -1,11 +1,13 @@
 var hex = document.getElementById('hex');
 var rgb = document.getElementById('rgb');
 var can = document.getElementById('canva');
+var buttons = document.getElementById('bottomButtons');
 
 function hello(a, b, c) {
     hex.value = a
     rgb.value = b
     can.style.backgroundColor = c
+    buttons.style.borderImageSource = `linear-gradient(to right, rgba(${b}, 0.5), rgb(${b}))`
 };
 
 const test = {

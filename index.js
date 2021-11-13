@@ -5,8 +5,7 @@ var i = 1
 var ob = new MutationObserver(() => {
     console.log(can.style.backgroundColor)
     while (i <= 9) {
-        var button = document.getElementById(`${i}`)
-        console.log(button)
+        var button = document.getElementById(`o0${i}`)
         button.style.backgroundColor = `${can.style.backgroundColor.slice(0, can.style.backgroundColor.length - 1)}, ${i/10})`
         i++
     }

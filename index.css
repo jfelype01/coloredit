@@ -1,11 +1,22 @@
-#canva {
+body {
+    background-color: rgba(0, 0, 255, 0.7);
+}
+
+#box-1 {
+    background-color: white;
+
     width: 320px;
     height: 320px;
 
     border-radius: 30px;
-    border: 3px solid black;
+    
+    margin: 32px;
+}
+#canva {
 
-    margin: 32px 32px 32px 32px;
+    border-radius: 30px 30px 35px 32px;
+    border: 3px solid rgb(255, 0, 0);
+
 }
 
 #first {
@@ -43,9 +54,9 @@
 }
 
 #rgb, #hex {
-    /* border: 1px solid transparent;
+    border: 1px solid transparent;
     outline: 0;
-    border-bottom: 1px solid black; */
+    border-bottom: 1px solid black;
 
     width: 120px;
     height: 48px;
@@ -63,7 +74,7 @@
 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-    margin-left: 72px;
+    margin: 32px 0px 0px 120px;
 }
 
 #rigthButtons button {
@@ -78,13 +89,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-    margin: 0px 8px 0px 8px;
+    margin: 48px 240px 0px 240px;
+
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, rgba(0, 0, 0, 0.5), black);
+
+    background: white;
 }
 
 #bottomButtons button {
     height: 64px;
-
-    
 
     border: 0px;
 
@@ -93,39 +108,53 @@
 #o01 {
     background-color: black;
     opacity: 0.1;
+
+
 }
 
 #o02 {
     background-color: black;
     opacity: 0.2;
+
 }
 
 #o03 {
+    
     background-color: black;
     opacity: 0.3;
 }
 
 #o04 {
+  
+
     background-color: black;
     opacity: 0.4;
 }
 
 #o05 {
+ 
+
     background-color: black;
     opacity: 0.5;
 }
 
 #o06 {
+   
+
     background-color: black;
     opacity: 0.6;
 }
 
 #o07 {
+  
+
     background-color: black;
     opacity: 0.7;
 }
 
 #o08 {
+  
+
     background-color: black;
     opacity: 0.8;
 }

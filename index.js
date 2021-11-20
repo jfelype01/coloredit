@@ -1,6 +1,7 @@
 var hex = document.getElementById('hex');
 var rgb = document.getElementById('rgb');
 var can = document.getElementById('canva');
+var but = document.getElementsByClassName('but')
 var i = 1
 var ob = new MutationObserver(() => {
     console.log(can.style.backgroundColor)
@@ -11,7 +12,13 @@ var ob = new MutationObserver(() => {
     }
     i = 1
     rgb.style.borderBottomColor = can.style.backgroundColor
+
     hex.style.borderBottomColor = can.style.backgroundColor
+    
+    for(let element of but) {
+        element.style.borderBottomColor = can.style.backgroundColor
+    }
+    
 })
 const hexCodes = {
     10() {return'a'},

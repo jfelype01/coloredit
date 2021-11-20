@@ -22,6 +22,8 @@ body {
 #first {
     display: flex;
     flex-direction: row;
+
+    margin-top: 32px;
 }
 
 .inputs {
@@ -50,16 +52,32 @@ body {
 }
 
 .inputs, .buttons {
-    margin-left: 48px;
+    margin-top: 0px;
+
+}
+
+.inputs button, .buttons button {
+    background-color: white;
+    border: 0px;
+    border-bottom: 2px solid black;
+    border-radius: 0px;
+    border-radius: 0px 12px 12px 0px;
+
+    font-family: 'Oswald', sans-serif;
+    color: rgb(120, 120, 120)
 }
 
 #rgb, #hex {
-    border: 1px solid transparent;
+    border: 0px;
     outline: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
 
     width: 120px;
     height: 48px;
+
+    font-size: 16px;
+
+    border-radius: 12px 0px 0px 12px;
 }
 
 .primeiro {
@@ -74,7 +92,8 @@ body {
 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-    margin: 32px 0px 0px 120px;
+    margin: 64px 0px 0px 64px;
+    max-height: 384px;
 }
 
 #rigthButtons button {
@@ -162,4 +181,14 @@ body {
 #o09 {
     background-color: black;
     opacity: 0.9;
+}
+
+.text {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+
+    color: #dcdcdc;
+
+    margin: 0px;
 }

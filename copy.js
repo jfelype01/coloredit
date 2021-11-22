@@ -12,5 +12,5 @@ function copyB() {
     rgb.select();
     rgb.setSelectionRange(0, 9999);
 
-    navigator.clipboard.writeText(rgb.value)
+    navigator.clipboard.writeText(`rgb(${rgb.value})`)
 }

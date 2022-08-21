@@ -1,194 +1,94 @@
 body {
-    background-color: rgba(0, 0, 255, 0.7);
+    background-color: #100F0F;
 }
 
-#box-1 {
-    background-color: white;
+#page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-    width: 320px;
-    height: 320px;
+}
 
-    border-radius: 30px;
+#manual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 72px 48px 0px 256px;
+}
+
+#painel canvas {
+    border-radius: 128px;
+
+    margin: 0px 0px 32px 0px;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.code {
+    background-color: #E2DCC8;
+
+    height: 48px;
+    width: 192px;
+
+    border: 0px;
+    padding: 0px 0px 0px 16px;
+    margin: 8px 8px 8px 0px;
+
+    border-radius: 0px 8px 8px 0px;
+
+    outline: 0px;
+    font-size: 24px;
     
-    margin: 32px;
-}
-#canva {
-
-    border-radius: 30px 30px 35px 32px;
-    border: 3px solid rgb(140, 140, 140);
-
 }
 
-#first {
-    display: flex;
-    flex-direction: row;
+.copy {
+    height: 48px;
+    width: 48px;
 
-    margin-top: 32px;
+    background-color: #F1F1F1;
+    border: 0px;
+    margin-top: 8px;
+    margin-left: 8px;
+
+    border-radius: 8px 0px 0px 8px;
 }
 
-.inputs {
-    display: flex;
-    flex-direction: row;
+.copy img {
+    height: 32px;
+    width: 32px;
+}
+
+#paterns {
+    max-width: 256px;
+    max-height: 512px;
 
     margin-top: 72px;
 
+    overflow: auto;
 }
 
-#inputsAndButt {
-    display:flex;
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    margin-top: 32px;
+#paterns::-webkit-scrollbar {
+    width: 12px;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: row;
-
-    margin-bottom: 72px;
-
+#paterns::-webkit-scrollbar-track {
+    background-color: #F1F1F1;
+    border-radius: 16px;
 }
 
-.inputs, .buttons {
-    margin-top: 0px;
-
+#paterns::-webkit-scrollbar-thumb {
+    background-color: #0F3D3E;
+    border-radius: 16px;
 }
 
-.inputs button, .buttons button {
-    background-color: white;
-    border: 0px;
-    border-bottom: 2px solid black;
-    border-radius: 0px;
-    border-radius: 0px 12px 12px 0px;
-
-    font-family: 'Oswald', sans-serif;
-    color: rgb(120, 120, 120)
-}
-
-#rgb, #hex {
-    border: 0px;
-    outline: 0;
-    border-bottom: 2px solid black;
-
-    width: 120px;
-    height: 48px;
-
-    font-size: 16px;
-
-    border-radius: 12px 0px 0px 12px;
-}
-
-.primeiro {
-    display: flex;
-    flex-direction: row;
-
-
-}
-
-#rigthButtons {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-    margin: 64px 0px 0px 64px;
-    max-height: 384px;
-}
-
-#rigthButtons button {
-
+.patern {
+    height: 64px;
     width: 64px;
-    height: 64px;
-
-    border: 0px;
-
-}
-#bottomButtons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-
-    margin: 48px 240px 0px 240px;
-
-    border: 5px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, rgba(0, 0, 0, 0.5), black);
-
-    background: white;
-}
-
-#bottomButtons button {
-    height: 64px;
-
-    border: 0px;
-
-}
-
-#o01 {
-    background-color: black;
-    opacity: 0.1;
-
-
-}
-
-#o02 {
-    background-color: black;
-    opacity: 0.2;
-
-}
-
-#o03 {
-    
-    background-color: black;
-    opacity: 0.3;
-}
-
-#o04 {
-  
-
-    background-color: black;
-    opacity: 0.4;
-}
-
-#o05 {
- 
-
-    background-color: black;
-    opacity: 0.5;
-}
-
-#o06 {
-   
-
-    background-color: black;
-    opacity: 0.6;
-}
-
-#o07 {
-  
-
-    background-color: black;
-    opacity: 0.7;
-}
-
-#o08 {
-  
-
-    background-color: black;
-    opacity: 0.8;
-}
-
-#o09 {
-    background-color: black;
-    opacity: 0.9;
-}
-
-.text {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 28px;
-
-    color: #dcdcdc;
-
-    margin: 0px;
 }

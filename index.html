@@ -1,107 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Document</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>ColoredIt</title>
 </head>
-<body style="margin: 0px">
-    <div id="geral">
-        <div class="primeiro">
-        <div id="first">
-            <div id="box-1">
-            <canvas id='canva' height="317px" width="317px" style="background-color: rgb(0, 0, 0);"></canvas>
+<body>
+    <div id="page">
+        <div id="manual">
+            <div id="painel">
+                <canvas id="canva" style="height: 300px; width: 300px; background-color: #0F3D3E;"></canvas>
             </div>
-            <div id='inputsAndButt'>
-                <p class="text">CÓDIGO DE COR HEXADECIMAL</p>
-                <div class='inputs'>
-                    <input type="text" id='hex'>
-                    <button onclick="copyButton()" class="but">Copiar</button>
-                </div>
-                <p class="text">CÓDIGO DE COR RGB</p>
-                <div class='buttons'>
-                    <input id='rgb' type="text ">
-                    <button onclick='copyB()' class="but">Copiar</button>
-                </div>
-                
-                <script src='./copy.js'></script>
-
-            <script src="index.js"></script>
+            <div id="inputs">
+                    <div class="label">
+                        <button onclick="copyButton('hex')" class="copy">
+                            <img src="./copyButton.png" alt="Copiar">
+                        </button>
+                        <label for="code">
+                            <input class="code" id="hex"></input>
+                        </label>
+                    </div>
+                    <div class="label">
+                        <button onclick="copyButton('rgb')" class="copy">
+                            <img src="./copyButton.png" alt="Copiar">
+                        </button>
+                        <label for="code">
+                            <input class="code" id="rgb"></input>
+                        </label>
+                    </div>
+                    <div class="label">
+                        <button onclick="copyButton('hsl')" class="copy">
+                            <img src="./copyButton.png" alt="Copiar">
+                        </button>
+                        <label for="code">
+                            <input class="code" id="hsl"></input>
+                        </label>
+                    </div>
+                    
+                <script src="./scripts/copy.js"></script>
             </div>
         </div>
-        <div id="rigthButtons">
-            <button onclick="test['White']()" style="background-color: White;"></button>
-            <button onclick="test['Yellow']()" style="background-color: yellow;"></button>
-            <button onclick="test['Orange']()" style="background-color: orange;"></button>
-            <button onclick="test['Red']()" style="background-color: red;"></button>
-            <button onclick="test['Brown']()" style="background-color: brown;"></button>
-            <button onclick="test['Pink']()" style="background-color: pink;"></button>
-            <button onclick="test['Violet']()" style="background-color: violet;"></button>
-            <button onclick="test['Purple']()" style="background-color:purple"></button>
-            <button onclick="test['Lime']()" style="background-color: lime;"></button>
-            <button onclick="test['Green']()" style="background-color: green;"></button>
-            <button onclick="test['Blue']()" style="background-color: blue;"></button>
-            <button onclick="test['Dark']()" style="background-color: darkblue"></button>
-            <button onclick="test['Gray']()" style="background-color: gray;"></button>
-            <button onclick="test['Black']()" style="background-color: black"></button>
-            <button onclick="test['Gold']()" style="background-color: gold;"></button>
-            <button onclick="test['darkOrange']()" style="background-color: darkorange;"></button>
-            <button onclick="test['orangeRed']()" style="background-color: orangered;"></button>
-            <button onclick="test['Coral']()" style="background-color: coral;"></button>
-            <button onclick="test['Salmom']()" style="background-color: salmon;"></button>
-            <button onclick="test['darkRed']()" style="background-color: darkred;"></button>
-            <button onclick="test['deepPink']()" style="background-color: deeppink;"></button>
-            <button onclick="test['Orchid']()" style="background-color:orchid"></button>
-            <button onclick="test['Magenta']()" style="background-color: magenta;"></button>
-            <button onclick="test['darkViolet']()" style="background-color: darkviolet;"></button>
-            <button onclick="test['Tan']()" style="background-color: tan;"></button>
-            <button onclick="test['blueViolet']()" style="background-color: blueviolet"></button>
-            <button onclick="test['Wheat']()" style="background-color: wheat;"></button>
-            <button onclick="test['Chocolate']()" style="background-color: chocolate"></button>
-            <button onclick="test['Olive']()" style="background-color: olive;"></button>
-            <button onclick="test['darkOliveGreen']()" style="background-color: darkolivegreen;"></button>
-            <button onclick="test['limeGreen']()" style="background-color: limegreen;"></button>
-            <button onclick="test['seaGreen']()" style="background-color: seagreen;"></button>
-            <button onclick="test['Pale']()" style="background-color: palegreen;"></button>
-            <button onclick="test['cadetBlue']()" style="background-color: cadetblue;"></button>
-            <button onclick="test['Aquamarine']()" style="background-color: aquamarine;"></button>
-            <button onclick="test['darkCyan']()" style="background-color:darkcyan"></button>
-            <button onclick="test['Teal']()" style="background-color: teal;"></button>
-            <button onclick="test['Turquoise']()" style="background-color: turquoise;"></button>
-            <button onclick="test['darkSlateGray']()" style="background-color: darkslategray;"></button>
-            <button onclick="test['steelBlue']()" style="background-color: steelblue"></button>
-            <button onclick="test['lightGrey']()" style="background-color: lightgrey;"></button>
-            <button onclick="test['Silver']()" style="background-color: silver"></button>
-            <button onclick="test['mediumBlue']()" style="background-color: mediumblue;"></button>
-            <button onclick="test['Navy']()" style="background-color: navy;"></button>
-            <button onclick="test['MidnightBlue']()" style="background-color: midnightblue"></button>
-            <button onclick="test['Gray31']()" style="background-color: #4f4f4f"></button>
-            <button onclick="test['Gray21']()" style="background-color: #363636;"></button>
-            <button onclick="test['Gray11']()" style="background-color: #1c1c1c"></button>
+        <div id="paterns">
+            <button class="patern" onclick="patternsButton['White']()" style="background-color: White;"></button>
+            <button class="patern" onclick="patternsButton['Yellow']()" style="background-color: yellow;"></button>
+            <button class="patern" onclick="patternsButton['Orange']()" style="background-color: orange;"></button>
+            <button class="patern" onclick="patternsButton['Red']()" style="background-color: red;"></button>
+            <button class="patern" onclick="patternsButton['Brown']()" style="background-color: brown;"></button>
+            <button class="patern" onclick="patternsButton['Pink']()" style="background-color: pink;"></button>
+            <button class="patern" onclick="patternsButton['Violet']()" style="background-color: violet;"></button>
+            <button class="patern" onclick="patternsButton['Purple']()" style="background-color:purple"></button>
+            <button class="patern" onclick="patternsButton['Lime']()" style="background-color: lime;"></button>
+            <button class="patern" onclick="patternsButton['Green']()" style="background-color: green;"></button>
+            <button class="patern" onclick="patternsButton['Blue']()" style="background-color: blue;"></button>
+            <button class="patern" onclick="patternsButton['Dark']()" style="background-color: darkblue"></button>
+            <button class="patern" onclick="patternsButton['Gray']()" style="background-color: gray;"></button>
+            <button class="patern" onclick="patternsButton['Black']()" style="background-color: black"></button>
+            <button class="patern" onclick="patternsButton['Gold']()" style="background-color: gold;"></button>
+            <button class="patern" onclick="patternsButton['darkOrange']()" style="background-color: darkorange;"></button>
+            <button class="patern" onclick="patternsButton['orangeRed']()" style="background-color: orangered;"></button>
+            <button class="patern" onclick="patternsButton['Coral']()" style="background-color: coral;"></button>
+            <button class="patern" onclick="patternsButton['Salmom']()" style="background-color: salmon;"></button>
+            <button class="patern" onclick="patternsButton['darkRed']()" style="background-color: darkred;"></button>
+            <button class="patern" onclick="patternsButton['deepPink']()" style="background-color: deeppink;"></button>
+            <button class="patern" onclick="patternsButton['Orchid']()" style="background-color:orchid"></button>
+            <button class="patern" onclick="patternsButton['Magenta']()" style="background-color: magenta;"></button>
+            <button class="patern" onclick="patternsButton['darkViolet']()" style="background-color: darkviolet;"></button>
+            <button class="patern" onclick="patternsButton['Tan']()" style="background-color: tan;"></button>
+            <button class="patern" onclick="patternsButton['blueViolet']()" style="background-color: blueviolet"></button>
+            <button class="patern" onclick="patternsButton['Wheat']()" style="background-color: wheat;"></button>
+            <button class="patern" onclick="patternsButton['Chocolate']()" style="background-color: chocolate"></button>
+            <button class="patern" onclick="patternsButton['Olive']()" style="background-color: olive;"></button>
+            <button class="patern" onclick="patternsButton['darkOliveGreen']()" style="background-color: darkolivegreen;"></button>
+            <button class="patern" onclick="patternsButton['limeGreen']()" style="background-color: limegreen;"></button>
+            <button class="patern" onclick="patternsButton['seaGreen']()" style="background-color: seagreen;"></button>
+            <button class="patern" onclick="patternsButton['Pale']()" style="background-color: palegreen;"></button>
+            <button class="patern" onclick="patternsButton['cadetBlue']()" style="background-color: cadetblue;"></button>
+            <button class="patern" onclick="patternsButton['Aquamarine']()" style="background-color: aquamarine;"></button>
+            <button class="patern" onclick="patternsButton['darkCyan']()" style="background-color:darkcyan"></button>
+            <button class="patern" onclick="patternsButton['Teal']()" style="background-color: teal;"></button>
+            <button class="patern" onclick="patternsButton['Turquoise']()" style="background-color: turquoise;"></button>
+            <button class="patern" onclick="patternsButton['darkSlateGray']()" style="background-color: darkslategray;"></button>
+            <button class="patern" onclick="patternsButton['steelBlue']()" style="background-color: steelblue"></button>
+            <button class="patern" onclick="patternsButton['lightGrey']()" style="background-color: lightgrey;"></button>
+            <button class="patern" onclick="patternsButton['Silver']()" style="background-color: silver"></button>
+            <button class="patern" onclick="patternsButton['mediumBlue']()" style="background-color: mediumblue;"></button>
+            <button class="patern" onclick="patternsButton['Navy']()" style="background-color: navy;"></button>
+            <button class="patern" onclick="patternsButton['MidnightBlue']()" style="background-color: midnightblue"></button>
+            <button class="patern" onclick="patternsButton['Gray31']()" style="background-color: #4f4f4f"></button>
+            <button class="patern" onclick="patternsButton['Gray21']()" style="background-color: #363636;"></button>
+            <button class="patern" onclick="patternsButton['Gray11']()" style="background-color: #1c1c1c"></button>
         </div>
-        </div>
-
-            
-        
-
-        <div id="bottomButtons">
-            <script src="const.js"></script>
-    
-            <script src="b.js"></script>
-            <button id='o01' onclick='js[0.1]()'></button>
-            <button id='o02' onclick='js[0.2]()'></button>
-            <button id='o03' onclick='js[0.3]()'></button>
-            <button id='o04' onclick='js[0.4]()'></button>
-            <button id='o05' onclick='js[0.5]()'></button>
-            <button id='o06' onclick='js[0.6]()'></button>
-            <button id='o07' onclick='js[0.7]()'></button>
-            <button id='o08' onclick='js[0.8]()'></button>
-            <button id='o09' onclick='js[0.9]()'></button>
-        </div>
+        <script src="./scripts/patterns.js"></script>
+        <script src="./scripts/index.js"></script>
     </div>
 </body>
 </html>

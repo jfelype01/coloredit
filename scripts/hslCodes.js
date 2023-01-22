@@ -1,4 +1,4 @@
-hsl.addEventListener('input', function() {
+function hexAndRgbComplete() {
     can.style.backgroundColor = `hsl(${hsl.value})`
     let color = hexAndHslToRgb(can.style.backgroundColor);
     rgb.value = color;
@@ -9,6 +9,10 @@ hsl.addEventListener('input', function() {
     }
 
     hex.value = `#${rgbToHex(rgb.value)}`;
+}
+
+hsl.addEventListener('input', function() {
+    hexAndRgbComplete()
 })
 
 hsl.onchange = () => {
@@ -19,6 +23,7 @@ hsl.onchange = () => {
         for (let i = 1; i < 3; i++) {
             hsl.value += `,${hslValue[i]}`
         }
+        hexAndRgbComplete()
     }
 
     hslValue = hsl.value.split(',');
@@ -31,5 +36,8 @@ hsl.onchange = () => {
             hslValue[2] += "%"
         }
         hsl.value = hslValue.join(', ')
-    } 
+        hexAndRgbComplete()
+    }
+
+
 }

@@ -1,10 +1,13 @@
 var hex = document.getElementById('hex');
 var rgb = document.getElementById('rgb');
+var hsl = document.getElementById('hsl');
 var can = document.getElementById('canva');
 
 function updateInputValue(a, b, c) {
+    let colors = b.split(', ')
     hex.value = a
     rgb.value = b
+    hsl.value = rgbToHsl(colors[0], colors[1], colors[2])
     can.style.backgroundColor = c
 };
 
